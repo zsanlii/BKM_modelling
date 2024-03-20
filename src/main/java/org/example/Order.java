@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Order {
     private int id;
@@ -8,7 +8,7 @@ public class Order {
     private int shipperId;
     private int userId;
     private int paymentTypeId;
-    private Date orderDate;
+    private LocalDate orderDate;
     private boolean isDelivered;
     private String cargoNo;
     private double totalPrice;
@@ -16,7 +16,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(int id, int shipperId, int userId, int paymentTypeId, Date orderDate, boolean isDelivered, String cargoNo, double totalPrice) {
+    public Order(int id, int shipperId, int userId, int paymentTypeId, LocalDate orderDate, boolean isDelivered, String cargoNo, double totalPrice) {
         this.id = id;
         this.shipperId = shipperId;
         this.userId = userId;
@@ -59,11 +59,11 @@ public class Order {
         this.paymentTypeId = paymentTypeId;
     }
 
-    public Date getOrderDate() {
+    public LocalDate getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    public void setOrderDate(LocalDate orderDate) {
         this.orderDate = orderDate;
     }
 

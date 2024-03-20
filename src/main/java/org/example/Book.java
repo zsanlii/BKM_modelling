@@ -1,6 +1,6 @@
 package org.example;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public class Book {
     private int id;
@@ -14,12 +14,13 @@ public class Book {
     private String isbn;
     private double price;
     private String cover;
-    private Date publicationYear;
+    private LocalDate publicationYear;
 
     public Book() {
     }
 
-    public Book(int id, int authorId, int publisherId, int categoryId, int paperId, int imageId, String name, int numberOfPage, String isbn, double price, String cover, Date publicationYear) {
+    public Book(int id, int authorId, int publisherId, int categoryId, int paperId,
+                int imageId, String name, int numberOfPage, String isbn, double price, String cover, LocalDate publicationYear) {
         this.id = id;
         this.authorId = authorId;
         this.publisherId = publisherId;
@@ -114,11 +115,11 @@ public class Book {
         this.cover = cover;
     }
 
-    public Date getPublicationYear() {
+    public LocalDate getPublicationYear() {
         return publicationYear;
     }
 
-    public void setPublicationYear(Date publicationYear) {
+    public void setPublicationYear(LocalDate publicationYear) {
         this.publicationYear = publicationYear;
     }
 

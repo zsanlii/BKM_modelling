@@ -1,17 +1,17 @@
 package org.example;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 public abstract class Person {
     private int id;
     private String firstName;
     private String lastName;
-    private Date birthdate;
+    private LocalDate birthdate;
 
     public Person() {
     }
 
-    public Person(int id, String firstName, String lastName, Date birthdate) {
+    public Person(int id, String firstName, String lastName,LocalDate birthdate) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -42,11 +42,11 @@ public abstract class Person {
         this.lastName = lastName;
     }
 
-    public Date getBirthdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBirthdate(Date birthdate) {
+    public void setBirthdate(LocalDate birthdate) {
         this.birthdate = birthdate;
     }
 }
